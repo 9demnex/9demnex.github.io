@@ -14,11 +14,12 @@ document.addEventListener('DOMContentLoaded', function () {
     } else if (hours < 18) {
         message = 'Good Afternoon from Tampa Bay!';
     } else {
-        message = 'Good Evening from Tampa Bay!!';
+        message = 'Good Evening from Tampa Bay!';
     }
 
     greeting.textContent = message;
     greeting.style.textAlign = 'center';
     greeting.style.color = '#ff930e';
+    greeting.style.fontSize = '1.3em';
     document.querySelector('.header').appendChild(greeting);
 });
