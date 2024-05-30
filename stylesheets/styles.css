@@ -51,19 +51,6 @@ body {
   top: -150px;
 }
 
-.avatar-bg-element {
-  background-color: #ff930e;
-  border-radius: 30%;
-  padding: 20px;
-  width: 125px;
-  height: 125px;
-  position: absolute;
-  top: -49px;
-  left: 341px;
-  transform: rotate(15deg);
-  z-index: -1;
-}
-
 .avatar:hover {
   transform: scale(1.1);
 }
@@ -149,6 +136,10 @@ a:hover {
 }
 
 @media only screen and (max-width : 420px) {
+  body {
+    padding-top: 40px;
+  }
+
   .main-content {
     flex-direction: column;
   }
