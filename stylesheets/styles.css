@@ -111,6 +111,13 @@ a:hover {
   justify-content: space-around;
 }
 
+.links-rotator-1 {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  padding: 1em;
+  transform: rotate(-8deg);
+}
+
 .footer {
   margin-top: 20px;
 }
