@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,51 +6,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
 </head>
 
 <body>
   <div class="container">
     <header class="header">
-      <img
-        src="https://media.licdn.com/dms/image/C4E03AQHP5MajoPUY8g/profile-displayphoto-shrink_200_200/0/1517738165481?e=1722470400&v=beta&t=QAjquBxiFNNK3AaihxVc5qw-kuzN4DexJPzaUNmbRnM"
-        alt="Avatar" class="avatar">
+      <div class="avatar-container">
+        <img
+          src="https://media.licdn.com/dms/image/C4E03AQHP5MajoPUY8g/profile-displayphoto-shrink_200_200/0/1517738165481?e=1722470400&v=beta&t=QAjquBxiFNNK3AaihxVc5qw-kuzN4DexJPzaUNmbRnM"
+          alt="Your Avatar" class="avatar">
+      </div>
       <h1>Chuck Holt</h1>
       <p class="bio">Graphic Design, Web Development, Art Management, AI Enthusiast</p>
     </header>
-    <div class="twocol">
-      <section class="links-section links-rotator-1">
-        <h2><sparkly-text style="--sparkly-text-size: 2.5em">&nbsp;</sparkly-text>Links I Find Useful</h2>
-        <ul id="useful-links">
-          <li><a href="https://www.npmjs.com/"><sparkly-text style="--sparkly-text-size: 2.5em">npm</sparkly-text></a>
-          </li>
-          <li><a href="https://placehold.co/">Placehold</a></li>
-          <li><a href="https://github.com/ripienaar/free-for-dev">Free For Dev</a></li>
-        </ul>
-        <sparkly-text style="--sparkly-text-size: 2.5em">&nbsp;</sparkly-text>
-      </section>
-      <section class="bio-links-section">
-        <h2>Contact</h2>
-        <ul id="bio-links">
-          <li><a href="https://example.com">Link 1</a></li>
-          <li><a href="https://example.com">Link 2</a></li>
+    <main class="main-content">
+      <section class="links">
+        <h2>Links I Find Useful</h2>
+        <ul>
+          <li><a href="https://example.com" target="_blank">Link 1</a></li>
+          <li><a href="https://example.com" target="_blank">Link 2</a></li>
+          <li><a href="https://example.com" target="_blank">Link 3</a></li>
         </ul>
       </section>
-    </div>
+      <section class="link-in-bio">
+        <h2>Ways To Reach Me</h2>
+        <p>Here you can place important links or call-to-action for your visitors.</p>
+      </section>
+    </main>
     <footer class="footer">
-      <button class="color-scheme-btn" data-scheme="dark">Dark Theme</button>
-      <button class="color-scheme-btn" data-scheme="light">Light Theme</button>
-      <button class="color-scheme-btn" data-scheme="blue">Blue Theme</button>
+      <p>© 2024 CHGD. All rights reserved.</p>
     </footer>
   </div>
   <script src="/javascripts/main.js"></script>
-  <script type="module" src="/node_modules/@stefanjudis/sparkly-text/sparkly-text.js"></script>
-
 </body>
 
 </html>
