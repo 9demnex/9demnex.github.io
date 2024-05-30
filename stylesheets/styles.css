@@ -8,11 +8,11 @@
 }
 
 [data-scheme="dark"] {
-  --primary-color: #1abc9c;
-  --secondary-color: #16a085;
-  --background-color: #2c3e50;
-  --text-color: #ecf0f1;
-  --accent-color: #e74c3c;
+  --primary-color: #E5E5E5;
+  --secondary-color: #14213D;
+  --background-color: #000000;
+  --text-color: #FFFFFF;
+  --accent-color: #FCA311;
 }
 
 [data-scheme="light"] {
