@@ -13,6 +13,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  position: relative;
 }
 
 .container {
@@ -48,6 +49,19 @@ body {
   transition: transform 0.3s ease-in-out;
   position: absolute;
   top: -150px;
+}
+
+.avatar-bg-element {
+  background-color: #ff930e;
+  border-radius: 30%;
+  padding: 20px;
+  width: 125px;
+  height: 125px;
+  position: absolute;
+  top: -49px;
+  left: 341px;
+  transform: rotate(15deg);
+  z-index: -1;
 }
 
 .avatar:hover {
@@ -114,6 +128,24 @@ a:hover {
   to {
     opacity: 1;
   }
+}
+
+.socialblock {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  top: 15px;
+  right: 2vw;
+  cursor: pointer;
+}
+
+.socialblock a {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.socialblock a:hover {
+  color: #ff930e;
 }
 
 @media only screen and (max-width : 420px) {
