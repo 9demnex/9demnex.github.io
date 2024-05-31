@@ -32,12 +32,10 @@
     body:not(.dark) .links:hover,
     .link-in-bio:hover {
       background-color: #dddddd;
-      /* Change this to the color you want */
     }
 
     body.dark .link-in-bio:hover {
       background-color: #3e3e3e;
-      /* Change this to the color you want */
     }
 
     .theme-switcher-wrapper {
@@ -184,7 +182,8 @@
       <section class="link-in-bio link-in-bio-m">
         <h2>Ways To Reach Me</h2>
         <p>I don't really do social media any more, but I email like a mofo.</p>
-        <a href="mailto:stropsdev@gmail.com" target="_blank">E-mail</a>
+        <a href="mailto:stropsdev@gmail.com" target="_blank">E-mail</a><br>
+        <button id="openModalButton">Contact Me</button>
       </section>
     </main>
     <main class="main-content">
@@ -219,8 +218,24 @@
       </section>
     </main>
     <footer class="footer">
-      <p>© 2024 CHGD. All rights reserved.</p>
+      <p>© <span id="currentYear"></span> CHGD. All rights reserved. </p>
     </footer>
+  </div>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form action="https://formspree.io/f/{your_form_id}" method="POST">
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="phone">Phone Number (optional)</label><br>
+        <input type="tel" id="phone" name="phone"><br>
+        <label for="message">Message</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
   </div>
   <script src="/javascripts/main.js"></script>
   <script type="module" src="/node_modules/@stefanjudis/sparkly-text/sparkly-text.js"></script>
@@ -229,6 +244,28 @@
       document.body.classList.toggle('dark', e.target.checked);
       document.querySelector('label[for="theme-switcher"]').textContent = e.target.checked ? 'Light Mode' : 'Dark Mode';
     });
+  </script>
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
+<script>
+  var modal = document.getElementById("myModal");
+  var btn = document.getElementById("openModalButton");
+  var span = document.getElementsByClassName("close")[0];
+  
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
   </script>
 </body>
 
