@@ -8,6 +8,7 @@ body {
   background-color: #121212a6;
   background-blend-mode: multiply;
   color: #e0e0e0;
+  padding-top: 65px;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -33,6 +34,16 @@ body {
 .header {
   text-align: center;
   margin-bottom: 20px;
+}
+
+.avatar-h1 {
+  font-size: 2.2em;
+  color: var(--text-color);
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: #ff930e;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 2px;
 }
 
 .avatar-container {
@@ -86,7 +97,6 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 20px;
 }
 
 section {
@@ -100,6 +110,10 @@ section {
 
 section:hover {
   background-color: #3e3e3e;
+}
+
+h2 {
+  margin: 0;
 }
 
 .links ul {
@@ -118,7 +132,7 @@ a {
 }
 
 a:hover {
-  color: #ffffff;
+  color: var(--text-color);
   text-decoration: underline;
 }
 
@@ -167,15 +181,15 @@ a:hover {
 
 @media only screen and (max-width : 520px) {
   body {
-    padding-top: 65px;
+    padding-top: 95px;
   }
 
   .main-content {
     flex-direction: column;
   }
 
-  .link-in-bio-m {
-    margin-bottom: 25px;
+  .container {
+    border-radius: 0;
   }
 }
 
