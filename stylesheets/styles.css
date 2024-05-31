@@ -196,7 +196,7 @@ a:hover {
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 600px;
   color: #fff;
 }
 
@@ -212,22 +212,24 @@ a:hover {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-  background-color: #555;
+  border: 2px solid #5a5a5a;
+  background-color: #333;
   color: #fff;
 }
 
 .modal-content input[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
+  background-color: #ff930e;
+  color: #000;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
   width: 100%;
+  text-transform: uppercase;
 }
 
 .modal-content input[type="submit"]:hover {
-  opacity: 0.8;
+  background-color: #f57c00;
 }
 
 .close {
@@ -239,22 +241,24 @@ a:hover {
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: #ff930e;
   text-decoration: none;
   cursor: pointer;
 }
 
 button, button:focus {
   font-size: 20px;
-  padding: 12px 30px;
+  font-family: 'Barlow Condensed', sans-serif;
+  padding: 12px 15px;
   border-radius: 5px;
-  background-color: #ff9800;
-  border: 2px solid #f57c00;
-  color: #fff;
+  background-color: #ff930e;
+  border: 2px solid #ff930e;
+  color: var(--text-color);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   transition: 0.3s;
   cursor: pointer;
   margin-top: 15px;
+  text-transform: uppercase;
 }
 
 button:hover {
