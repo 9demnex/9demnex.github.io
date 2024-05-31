@@ -157,12 +157,30 @@ a:hover {
   color: #ff930e;
 }
 
+.flex-container {
+  display: flex;
+}
+
+.flex-item {
+  flex: 1;
+}
+
 @media only screen and (max-width : 520px) {
   body {
     padding-top: 65px;
   }
 
   .main-content {
+    flex-direction: column;
+  }
+
+  .link-in-bio-m {
+    margin-bottom: 25px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .flex-container {
     flex-direction: column;
   }
 }
