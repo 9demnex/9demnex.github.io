@@ -296,6 +296,43 @@
       }
   </script>
   </script>
+  <script>
+    // Function to set the theme cookie
+    function setThemeCookie(theme) {
+      document.cookie = `theme=${theme}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/`;
+    }
+
+    // Function to get the theme cookie
+    function getThemeCookie() {
+      const cookies = document.cookie.split(';');
+      for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        if (cookie.startsWith('theme=')) {
+          return cookie.substring('theme='.length, cookie.length);
+        }
+      }
+      return null;
+    }
+
+    // Function to toggle the theme
+    function toggleTheme() {
+      const themeSwitcher = document.getElementById('theme-switcher');
+      const currentTheme = themeSwitcher.checked ? 'dark' : 'light';
+      setThemeCookie(currentTheme);
+      document.body.classList.toggle('dark', themeSwitcher.checked);
+      document.querySelector('label[for="theme-switcher"]').textContent = themeSwitcher.checked ? 'Light Mode' : 'Dark Mode';
+    }
+
+    // Check if there is a theme cookie and set the theme accordingly
+    const themeCookie = getThemeCookie();
+    if (themeCookie === 'dark') {
+      document.getElementById('theme-switcher').checked = true;
+      toggleTheme();
+    }
+
+    // Add event listener to the theme switcher
+    document.getElementById('theme-switcher').addEventListener('change', toggleTheme);
+  </script>
 </body>
 
 </html>
