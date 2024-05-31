@@ -86,7 +86,7 @@
 <body>
   <div class="theme-switcher-wrapper">
     <input type="checkbox" id="theme-switcher" class="theme-switcher">
-    <label for="theme-switcher">Dark Mode</label>
+    <label for="theme-switcher" style="margin-left: 3px;">Dark Mode</label>
   </div>
   <div class="socialblock"><a href="https://www.linkedin.com/in/wchuckholt/">
       <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="currentColor" viewBox="0 0 512 512">
@@ -156,7 +156,7 @@
           src="https://media.licdn.com/dms/image/C4E03AQHP5MajoPUY8g/profile-displayphoto-shrink_200_200/0/1517738165481?e=1722470400&v=beta&t=QAjquBxiFNNK3AaihxVc5qw-kuzN4DexJPzaUNmbRnM"
           alt="Your Avatar" class="avatar floating">
       </div>
-      <h1 class="avatar-h1">Chuck Holt</h1>
+      <h1 class="avatar-h1"><sparkly-text style="--sparkly-text-size: .9em">Chuck Holt</sparkly-text></h1>
       <p class="bio">Graphic Design, Web Development, Art Management, AI Enthusiast</p>
     </header>
     <main class="main-content">
@@ -223,6 +223,7 @@
     </footer>
   </div>
   <script src="/javascripts/main.js"></script>
+  <script type="module" src="/node_modules/@stefanjudis/sparkly-text/sparkly-text.js"></script>
   <script>
     document.getElementById('theme-switcher').addEventListener('change', function (e) {
       document.body.classList.toggle('dark', e.target.checked);
