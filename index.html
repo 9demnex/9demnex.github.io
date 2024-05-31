@@ -29,8 +29,19 @@
       transition: background-color 0.5s, color 0.5s;
     }
 
+    body:not(.dark) .links:hover,
+    .link-in-bio:hover {
+      background-color: #dddddd;
+      /* Change this to the color you want */
+    }
+
+    body.dark .link-in-bio:hover {
+      background-color: #3e3e3e;
+      /* Change this to the color you want */
+    }
+
     .theme-switcher-wrapper {
-      position: fixed;
+      position: absolute;
       top: 1em;
       left: 1em;
       display: flex;
@@ -151,13 +162,24 @@
     <main class="main-content">
       <section class="links">
         <h2>Links I Find Useful</h2>
-        <ul>
-          <li><a href="https://www.npmjs.com" target="_blank">npm</a></li>
-          <li><a href="https://placehold.co" target="_blank">Placehold</a></li>
-          <li><a href="https://github.com/ripienaar/free-for-dev" target="_blank">Free For Dev</a></li>
-        </ul>
+        <div class="flex-container">
+          <div class="flex-item">
+            <ul>
+              <li><a href="https://www.npmjs.com" target="_blank">npm</a></li>
+              <li><a href="https://placehold.co" target="_blank">Placehold</a></li>
+              <li><a href="https://github.com/ripienaar/free-for-dev" target="_blank">Free For Dev</a></li>
+            </ul>
+          </div>
+          <div class="flex-item">
+            <ul>
+              <li><a href="https://www.npmjs.com" target="_blank">npm</a></li>
+              <li><a href="https://placehold.co" target="_blank">Placehold</a></li>
+              <li><a href="https://github.com/ripienaar/free-for-dev" target="_blank">Free For Dev</a></li>
+            </ul>
+          </div>
+        </div>
       </section>
-      <section class="link-in-bio">
+      <section class="link-in-bio link-in-bio-m">
         <h2>Ways To Reach Me</h2>
         <p>I don't really do social media any more, but I email like a mofo.</p>
         <a href="mailto:stropsdev@gmail.com" target="_blank">E-mail</a>
