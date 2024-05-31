@@ -235,6 +235,8 @@ a:hover {
 .modal-content input[type="submit"] {
   background-color: #ff930e;
   color: var(--text-color);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
