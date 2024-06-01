@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let message;
 
     if (hours < 12) {
-        message = 'Good Morning from Tampa Bay!!';
+        message = 'Good Morning from Tampa Bay!';
     } else if (hours < 18) {
         message = 'Good Afternoon from Tampa Bay!';
     } else {
