@@ -245,7 +245,7 @@
   <div id="myModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <form action="https://formspree.io/f/mleqygke" method="POST">
+      <form id="contact-form" action="https://formspree.io/f/mleqygke" method="POST">
         <label for="name">Name</label><br>
         <input type="text" id="name" name="name" required><br>
         <label for="email">Email</label><br>
@@ -254,9 +254,9 @@
         <input type="tel" id="phone" name="phone"><br>
         <label for="message">Message</label><br>
         <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
-        <div class="cf-turnstile" data-sitekey="0x4AAAAAABjffeIlwC67ZV99"></div>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAABjffeIlwC67ZV99" data-callback="onSubmit"></div>
         <input type="submit" value="Submit">
-      </form>
+        </form>
     </div>
   </div>
   <script src="/javascripts/main.js"></script>
@@ -288,11 +288,6 @@
       modal.style.display = "none";
     }
   }
-  </script>
-   <script>
-    function onSubmit(token) {
-      document.getElementById("demo-form").submit();
-    }
     <script>
       function onClick(e) {
         e.preventDefault();
@@ -302,7 +297,6 @@
           });
         });
       }
-  </script>
   </script>
   <script>
     // Function to set the theme cookie
@@ -341,6 +335,13 @@
     // Add event listener to the theme switcher
     document.getElementById('theme-switcher').addEventListener('change', toggleTheme);
   </script>
+  <script>
+    function onSubmit(token) {
+      document.getElementById("contact-form").submit();
+    }
+  </script>
+
+  
 </body>
 
 </html>
