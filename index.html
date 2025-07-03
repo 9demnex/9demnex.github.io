@@ -79,6 +79,75 @@
     .theme-switcher:checked::before {
       transform: translateX(1em);
     }
+
+    /* Metal Date Time */
+    .glass-metal-bar {
+		position: fixed;
+		bottom: 18px;
+		/* Change to top: 18px; for top bar */
+		left: 50%;
+		transform: translateX(-50%);
+		min-width: 100px;
+		max-width: 98vw;
+		padding: 0.28em 1em;
+		background: rgba(38, 42, 49, 0.78);
+		border-radius: 11px;
+		box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.18), 0 1px 4px 1px rgba(180, 200, 220, 0.07) inset;
+		border: 1px solid rgba(180, 200, 220, 0.22);
+		backdrop-filter: blur(5px);
+		color: #e0e5eb;
+		font-family: 'Segoe UI', 'Arial', sans-serif;
+		font-size: 0.99em;
+		letter-spacing: 0.03em;
+		display: flex;
+		align-items: center;
+		gap: 0.38em;
+		z-index: 9999;
+		opacity: 0.93;
+		user-select: none;
+		pointer-events: none;
+	}
+
+	.glass-metal-bar .icon {
+		width: 1.3em;
+		height: 1.3em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		background: linear-gradient(120deg, #adb6c6 45%, #58616e 95%);
+		margin-right: 0.20em;
+		box-shadow: 0 1px 4px 0 rgba(180, 200, 220, 0.09) inset;
+		border: 1px solid #b1c3ce33;
+		overflow: hidden;
+		flex-shrink: 0;
+		padding: 0.1em;
+	}
+
+	.glass-metal-bar .icon img {
+		width: 100%;
+		height: 100%;
+		display: block;
+		object-fit: contain;
+		filter: drop-shadow(0 0 2px #2977b3bb);
+	}
+
+  .estTimeText-sm {
+    font-size: 0.85em;
+    font-family: "PT Sans Narrow", sans-serif;
+  }
+
+	@media (max-width: 400px) {
+		.glass-metal-bar {
+			padding: 0.18em 0.55em;
+			font-size: 0.90em;
+		}
+
+		.glass-metal-bar .icon {
+			width: 1em;
+			height: 1em;
+		}
+	}
   </style>
 </head>
 
@@ -412,6 +481,36 @@
     transition: opacity 0.5s, bottom 0.5s;
   ">Message sent successfully!</div>
 
+  <!-- Date Time Container -->
+  <div class="glass-metal-bar" id="estTimeBar">
+    <span class="icon">
+      <img src="https://www.strops.com/dev/img/blue-clock.svg" alt="clock">
+    </span>
+    <span id="estTimeText" class="estTimeText-sm">--/--/---- --:--:--</span>
+  </div>
+  <script>
+    function updateESTTimeBar() {
+      const optionsDate = {
+        timeZone: 'America/New_York',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      };
+      const optionsTime = {
+        timeZone: 'America/New_York',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+      };
+      const now = new Date();
+      const date = now.toLocaleDateString('en-US', optionsDate);
+      const time = now.toLocaleTimeString('en-US', optionsTime);
+      document.getElementById('estTimeText').innerText = `${date} ${time}`;
+    }
+    updateESTTimeBar();
+    setInterval(updateESTTimeBar, 1000);
+  </script>
+<!-- Date Time Container -->
 </body>
 
 </html>
