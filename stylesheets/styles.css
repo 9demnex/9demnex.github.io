@@ -1,3 +1,8 @@
+:root {
+  --bg-color: rgba(255, 255, 255, 0.65);
+  --text-color: black;
+}
+
 body {
   background-image: url(https://live.staticflickr.com/65535/53758272984_51153eec0c_h.jpg);
   background-position: center;
@@ -15,6 +20,26 @@ body {
   align-items: center;
   min-height: 100vh;
   position: relative;
+}
+
+body.dark {
+  --bg-color: rgba(0, 0, 0, 0.65);
+  --text-color: white;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.5s, color 0.5s;
+}
+
+body:not(.dark) .links:hover,
+.link-in-bio:hover {
+  background-color: #dddddd;
+}
+
+body.dark .link-in-bio:hover {
+  background-color: #3e3e3e;
 }
 
 .container {
@@ -92,6 +117,117 @@ body {
 .bio {
   font-size: 1.2em;
   color: var(--text-color);
+}
+
+/* Theme Switcher */
+.theme-switcher-wrapper {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.theme-switcher {
+  appearance: none;
+  width: 2em;
+  height: 1em;
+  background-color: #ffffff;
+  border-radius: 1em;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.5s;
+}
+
+.theme-switcher::before {
+  content: '';
+  display: block;
+  width: 1em;
+  height: 1em;
+  background-color: #ff930e;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateX(0);
+  transition: transform 0.5s;
+}
+
+.theme-switcher:checked {
+  background-color: #000;
+  border: 1px solid #ff930e;
+}
+
+.theme-switcher:checked::before {
+  transform: translateX(1em);
+}
+
+/* Metal Date Time */
+.glass-metal-bar {
+  position: fixed;
+  bottom: 18px;
+  /* Change to top: 18px; for top bar */
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 100px;
+  max-width: 98vw;
+  padding: 0.28em 1em;
+  background: rgba(38, 42, 49, 0.78);
+  border-radius: 11px;
+  box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.18), 0 1px 4px 1px rgba(180, 200, 220, 0.07) inset;
+  border: 1px solid rgba(180, 200, 220, 0.22);
+  backdrop-filter: blur(5px);
+  color: #e0e5eb;
+  font-family: 'Share', 'Arial', sans-serif;
+  font-size: 0.99em;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  gap: 0.38em;
+  z-index: 9999;
+  opacity: 0.93;
+  user-select: none;
+  pointer-events: none;
+}
+
+.glass-metal-bar .icon {
+  width: 1.3em;
+  height: 1.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(120deg, #adb6c6 45%, #58616e 95%);
+  margin-right: 0.20em;
+  box-shadow: 0 1px 4px 0 rgba(180, 200, 220, 0.09) inset;
+  border: 1px solid #b1c3ce33;
+  overflow: hidden;
+  flex-shrink: 0;
+  padding: 0.1em;
+}
+
+.glass-metal-bar .icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 0 2px #2977b3bb);
+}
+
+.estTimeText-sm {
+  font-size: 0.85em;
+  font-family: "Share", sans-serif;
+}
+
+@media (max-width: 400px) {
+  .glass-metal-bar {
+    padding: 0.18em 0.55em;
+    font-size: 0.90em;
+  }
+
+  .glass-metal-bar .icon {
+    width: 1em;
+    height: 1em;
+  }
 }
 
 .main-content {
@@ -199,7 +335,8 @@ a:hover {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
 }
 
 .modal-content {
@@ -218,9 +355,11 @@ a:hover {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -228,11 +367,13 @@ a:hover {
 
 .modal-content label {
   color: #fff;
+  font-family: "Share", sans-serif;
+  font-size: clamp(1.125rem, calc(1.009rem + 0.488vw), 1.375rem);
 }
 
-.modal-content input[type="text"], 
-.modal-content input[type="email"], 
-.modal-content input[type="tel"], 
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content input[type="tel"],
 .modal-content textarea {
   width: 100%;
   padding: 12px 20px;
@@ -274,7 +415,8 @@ a:hover {
   cursor: pointer;
 }
 
-button, button:focus {
+button,
+button:focus {
   font-size: 20px;
   font-family: 'Barlow Condensed', sans-serif;
   padding: 12px 15px;
@@ -328,7 +470,7 @@ button:active {
     bottom: 35px;
     right: -45px;
     position: absolute;
-  
+
   }
 }
 
