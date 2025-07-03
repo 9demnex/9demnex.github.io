@@ -337,12 +337,47 @@
   </script>
   <!-- Add form submission handling -->
   <script>
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
+    let turnstileToken = '';
+
+    function onTurnstileSuccess(token) {
+      document.getElementById('cf-turnstile-response').value = token;
+      turnstileToken = token;
+    }
+
+    document.getElementById('contact-form').addEventListener('submit', async function (e) {
       e.preventDefault();
-      if (document.getElementById('cf-turnstile-response').value) {
-        this.submit();
-      } else {
+
+      if (!turnstileToken) {
         alert('Please wait for the security check to complete');
+        return;
+      }
+
+      const form = e.target;
+      const data = new FormData(form);
+
+      // Disable submit button
+      form.querySelector('input[type="submit"]').disabled = true;
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (res.ok) {
+          // Show thank you message
+          form.innerHTML = '<p>Thank you! I’ll be in touch soon.</p>';
+        } else {
+          const result = await res.json();
+          alert(result.error || 'Something went wrong. Please try again.');
+          form.querySelector('input[type="submit"]').disabled = false;
+        }
+      } catch (error) {
+        alert('Network error. Please try again.');
+        form.querySelector('input[type="submit"]').disabled = false;
       }
     });
   </script>
