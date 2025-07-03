@@ -344,6 +344,22 @@
       turnstileToken = token;
     }
 
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.style.visibility = 'visible';
+      toast.style.opacity = '1';
+      toast.style.bottom = '50px';
+
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.bottom = '30px';
+        setTimeout(() => {
+          toast.style.visibility = 'hidden';
+        }, 500);
+      }, 4000);
+    }
+
     document.getElementById('contact-form').addEventListener('submit', async function (e) {
       e.preventDefault();
 
@@ -354,22 +370,18 @@
 
       const form = e.target;
       const data = new FormData(form);
-
-      // Disable submit button
       form.querySelector('input[type="submit"]').disabled = true;
 
       try {
         const res = await fetch(form.action, {
           method: 'POST',
           body: data,
-          headers: {
-            'Accept': 'application/json'
-          }
+          headers: { 'Accept': 'application/json' }
         });
 
         if (res.ok) {
-          // Show thank you message
-          form.innerHTML = '<p>Thank you! I’ll be in touch soon.</p>';
+          showToast('Message sent successfully!');
+          document.getElementById('myModal').style.display = 'none';
         } else {
           const result = await res.json();
           alert(result.error || 'Something went wrong. Please try again.');
@@ -381,6 +393,25 @@
       }
     });
   </script>
+  
+  <div id="toast" style="
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 16px;
+    position: fixed;
+    z-index: 999;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    font-size: 17px;
+    opacity: 0;
+    transition: opacity 0.5s, bottom 0.5s;
+  ">Message sent successfully!</div>
+
 </body>
 
 </html>
