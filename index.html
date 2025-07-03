@@ -240,21 +240,27 @@
       <!-- <img src="/images/mandrept-swim.png" alt="aligator with orange" class="chd-footer-img"> -->
     </footer>
   </div>
+  <!-- Contact Modal -->
   <div id="myModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
       <form id="contact-form" action="https://formspree.io/f/mleqygke" method="POST">
         <label for="name">Name</label><br>
-        <input type="text" id="name" name="name" required><br>
+        <input type="text" id="name" name="name" required /><br>
         <label for="email">Email</label><br>
-        <input type="email" id="email" name="email" required><br>
+        <input type="email" id="email" name="email" required /><br>
         <label for="phone">Phone Number (optional)</label><br>
-        <input type="tel" id="phone" name="phone"><br>
+        <input type="tel" id="phone" name="phone" /><br>
         <label for="message">Message</label><br>
-        <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
-        <div class="cf-turnstile" data-sitekey="0x4AAAAAABjffeIlwC67ZV99" data-callback="onSubmit"></div>
-        <input type="submit" value="Submit">
-        </form>
+        <textarea id="message" name="message" rows="4"></textarea><br>
+  
+        <!-- Turnstile widget with callback -->
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAABjffeIlwC67ZV99" data-callback="onTurnstileSuccess">
+        </div>
+        <input type="hidden" name="cf-turnstile-response" id="cf-turnstile-response" />
+  
+        <input type="submit" value="Submit" />
+      </form>
     </div>
   </div>
   <script src="/javascripts/main.js"></script>
@@ -286,15 +292,11 @@
       modal.style.display = "none";
     }
   }
-    <script>
-      function onClick(e) {
-        e.preventDefault();
-        grecaptcha.ready(function() {
-          grecaptcha.execute('reCAPTCHA_site_key', {action: 'submit'}).then(function(token) {
-              // Add your logic to submit to your backend server here.
-          });
-        });
-      }
+
+  // Handle Turnstile callback
+  function onTurnstileSuccess(token) {
+    document.getElementById('cf-turnstile-response').value = token;
+  }
   </script>
   <script>
     // Function to set the theme cookie
@@ -333,13 +335,17 @@
     // Add event listener to the theme switcher
     document.getElementById('theme-switcher').addEventListener('change', toggleTheme);
   </script>
+  <!-- Add form submission handling -->
   <script>
-    function onSubmit(token) {
-      document.getElementById("contact-form").submit();
-    }
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (document.getElementById('cf-turnstile-response').value) {
+        this.submit();
+      } else {
+        alert('Please wait for the security check to complete');
+      }
+    });
   </script>
-
-  
 </body>
 
 </html>
