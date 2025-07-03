@@ -37,12 +37,12 @@ Welcome to my github—home to my work, projects, favorite resources, and the jo
 Here are a few highlights of my professional collaborations:
 
 - **Tampa Bay Downs** – Website & branding for the iconic Florida horse-racing venue.
-- **Pirates Pub‑N‑Grub** – UI/UX and web design for the popular local brewery and restaurant.
+- **Pirates Pub‑N‑Grub** – Web design for the popular local brewery and restaurant.
 - **Valhalla Ordnance** – E‑commerce site and digital presence for firearms & accessories.
-- **Punkloader (Strops.com)** – Art direction and development for a music-tech startup.
-- **Benchmark Payment Systems** – End-to-end web solution for financial-services integration.
-- **INKLO Band** – Music promotion site for independent artists.
-- **Rulebreakers** – Creative production and web infrastructure for an entertainment collective.
+- **Punkloader (Strops.com)** – Just trying something.
+- **Benchmark Payment Systems** – Website solution for financial-services integration.
+- **INKLO Band** – Independent artist.
+- **Rulebreakers** – Podcast Site.
 
 ---
 
@@ -50,14 +50,14 @@ Here are a few highlights of my professional collaborations:
 
 I’ve stepped away from traditional social media—but I **email like a mofo**.
 
-- Click **Contact Me** above (on the site)  
+- Click **Contact Me** (on the site)  
 - Or drop me a line at: **chuck@9demnex.com**
 
 ---
 
 ## 📌 About This Page
 
-This site is a curated personal portfolio. Explore what catches your eye—whether design, web tech, AI-driven creativity, or cool resources—and let’s make something awesome together.
+This site is a curated personal repository I've had for years and finally got around to learning github. Whether design, web tech, AI-driven creativity, or cool resources—it's a collection of my journy of learning.
 
 ---
 
