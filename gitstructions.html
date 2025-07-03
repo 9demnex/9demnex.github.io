@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VS Code + GitHub Guide</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0f0f, #1f1f1f);
+            color: #fff;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .x9dem-container {
+            max-width: 900px;
+            width: 100%;
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .x9dem-section {
+            margin-bottom: 2rem;
+        }
+
+        .x9dem-section h2 {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        pre {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            position: relative;
+        }
+
+        code {
+            font-family: monospace;
+            color: #a9f1df;
+            white-space: pre-wrap;
+            word-break: break-word;
+            display: block;
+        }
+
+        .x9dem-copy-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: none;
+            color: rgba(255, 255, 255, 0.6);
+            border: none;
+            font-size: 0.8rem;
+            cursor: pointer;
+            padding: 0;
+            transition: color 0.3s ease;
+            font-style: italic;
+        }
+
+        .x9dem-copy-btn:hover {
+            color: #a9f1df;
+        }
+
+        @media (max-width: 600px) {
+            .x9dem-container {
+                padding: 1rem;
+            }
+
+            pre {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="x9dem-container">
+        <div class="x9dem-section">
+            <h2>Check if Git is Installed</h2>
+            <pre><button class="x9dem-copy-btn">Copy</button><code>git --version</code></pre>
+        </div>
+        <div class="x9dem-section">
+            <h2>Set Username and Email</h2>
+            <pre><button class="x9dem-copy-btn">Copy</button><code>git config --global user.name "Your Name"
+git config --global user.email "you@example.com"</code></pre>
+        </div>
+        <div class="x9dem-section">
+            <h2>Clone a GitHub Repository</h2>
+            <p>Open Command Palette (<code>Ctrl+Shift+P</code> / <code>Cmd+Shift+P</code>) and choose:</p>
+            <pre><button class="x9dem-copy-btn">Copy</button><code>Git: Clone</code></pre>
+        </div>
+        <div class="x9dem-section">
+            <h2>Push Changes to GitHub</h2>
+            <ol>
+                <li>Stage changes using the Source Control panel</li>
+                <li>Write a commit message</li>
+                <li>Click the `...` and choose <strong>Push</strong></li>
+            </ol>
+            <p>Or use Command Palette:</p>
+            <pre><button class="x9dem-copy-btn">Copy</button><code>Git: Push</code></pre>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.x9dem-copy-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const codeBlock = button.nextElementSibling;
+                if (codeBlock && codeBlock.tagName === 'CODE') {
+                    navigator.clipboard.writeText(codeBlock.innerText.trim());
+                    button.textContent = 'Copied!';
+                    setTimeout(() => (button.textContent = 'Copy'), 1500);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
