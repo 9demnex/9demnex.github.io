@@ -165,9 +165,7 @@ body.dark .link-in-bio:hover {
 .glass-metal-bar {
   position: fixed;
   bottom: 18px;
-  /* Change to top: 18px; for top bar */
-  left: 50%;
-  transform: translateX(-50%);
+  left: 25px;
   min-width: 100px;
   max-width: 98vw;
   padding: 0.28em 1em;
