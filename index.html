@@ -19,7 +19,7 @@
 <body>
   <div class="theme-switcher-wrapper">
     <input type="checkbox" id="theme-switcher" class="theme-switcher">
-    <label for="theme-switcher" style="margin-left: 3px;">Dark Mode</label>
+    <label for="theme-switcher" style="margin-left: 3px;">Go Dark</label>
   </div>
   <div class="socialblock"><a href="https://www.linkedin.com/in/wchuckholt/">
       <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="currentColor" viewBox="0 0 512 512">
@@ -206,7 +206,7 @@
   <script>
     document.getElementById('theme-switcher').addEventListener('change', function (e) {
       document.body.classList.toggle('dark', e.target.checked);
-      document.querySelector('label[for="theme-switcher"]').textContent = e.target.checked ? 'Light Mode' : 'Dark Mode';
+      document.querySelector('label[for="theme-switcher"]').textContent = e.target.checked ? 'Go Light' : 'Go Dark';
     });
   </script>
   <script>
@@ -260,7 +260,7 @@
       const currentTheme = themeSwitcher.checked ? 'dark' : 'light';
       setThemeCookie(currentTheme);
       document.body.classList.toggle('dark', themeSwitcher.checked);
-      document.querySelector('label[for="theme-switcher"]').textContent = themeSwitcher.checked ? 'Light Mode' : 'Dark Mode';
+      document.querySelector('label[for="theme-switcher"]').textContent = themeSwitcher.checked ? 'Go Light' : 'Go Dark';
     }
 
     // Check if there is a theme cookie and set the theme accordingly
