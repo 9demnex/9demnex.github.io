@@ -62,4 +62,5 @@ This site is a curated personal repository I've had for years and finally got ar
 ---
 
 © 2025 Chuck Holt · All rights reserved.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3fb06b6f-68c1-4608-bca3-b11bd49517c8/deploy-status)](https://app.netlify.com/projects/vscode-github-guide/deploys)
 
