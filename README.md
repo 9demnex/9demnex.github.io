@@ -1,7 +1,6 @@
 # Chuck Holt
 
-![Hello!](https://img.shields.io/badge/-Hello!-%23FFA500?style=flat)
-![From Tampa Bay](https://img.shields.io/badge/-From%20Tampa%20Bay-blue?style=flat)
+![Hello! From Tampa Bay](https://img.shields.io/badge/Hello!-From%20Tampa%20Bay-%23FFA500?labelColor=blue&style=flat)
 
 
 **Graphic Designer · Web Developer · Art Manager · AI Enthusiast**
