@@ -54,7 +54,7 @@ Here are a few highlights of my professional collaborations:
 I’ve stepped away from traditional social media—but I **email like a mofo**.
 
 - Click **Contact Me** (on the site)  
-- Or drop me a line at: **chuck@9demnex.com**
+- Or drop me a line **Here](mailto:chuck@9demnex.com)**
 
 ---
 
