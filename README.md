@@ -32,7 +32,7 @@ Welcome to my github—home to my work, projects, favorite resources, and the jo
 
 ---
 
-## 💼 Selected Projects
+## Selected Projects
 
 Here are a few highlights of my professional collaborations:
 
@@ -55,10 +55,11 @@ I’ve stepped away from traditional social media—but I **email like a mofo**.
 
 ---
 
-## 📌 About This Page
+## About This Page
 
 This site is a curated personal repository I've had for years and finally got around to learning github. Whether design, web tech, AI-driven creativity, or cool resources—it's a collection of my journy of learning.
 
 ---
 
 © 2025 Chuck Holt · All rights reserved.
+
