@@ -1,5 +1,9 @@
 # Chuck Holt
 
+![Hello!](https://img.shields.io/badge/-Hello!-%23FFA500?style=flat)
+![From Tampa Bay](https://img.shields.io/badge/-From%20Tampa%20Bay-blue?style=flat)
+
+
 **Graphic Designer · Web Developer · Art Manager · AI Enthusiast**
 
 Welcome to my github—home to my work, projects, favorite resources, and the journey of learning to code for web. With the advent of AI I've learned even more at a faster pace.
