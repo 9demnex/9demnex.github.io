@@ -1,5 +1,8 @@
 # Chuck Holt
 
+![Hello! From Tampa Bay](https://img.shields.io/badge/Hello!-From%20Tampa%20Bay-%23FFA500?labelColor=blue&style=flat)
+
+
 **Graphic Designer · Web Developer · Art Manager · AI Enthusiast**
 
 Welcome to my github—home to my work, projects, favorite resources, and the journey of learning to code for web. With the advent of AI I've learned even more at a faster pace.
@@ -51,7 +54,7 @@ Here are a few highlights of my professional collaborations:
 I’ve stepped away from traditional social media—but I **email like a mofo**.
 
 - Click **Contact Me** (on the site)  
-- Or drop me a line at: **chuck@9demnex.com**
+- Or drop me a line **[Here](mailto:chuck@9demnex.com)**
 
 ---
 
@@ -61,5 +64,5 @@ This site is a curated personal repository I've had for years and finally got ar
 
 ---
 
-© 2025 Chuck Holt · All rights reserved.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3fb06b6f-68c1-4608-bca3-b11bd49517c8/deploy-status)](https://app.netlify.com/projects/vscode-github-guide/deploys)  © 2025 Chuck Holt · All rights reserved.
 
