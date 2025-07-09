@@ -15,6 +15,7 @@ body {
   background-blend-mode: multiply;
   color: #e0e0e0;
   padding-top: 65px;
+  padding-bottom: 65px;
   margin: 0;
   display: flex;
   justify-content: center;
